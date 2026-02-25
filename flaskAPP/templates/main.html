@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Анкета заемщика</title>
+</head>
+<head>
+    <h1>Заполните анкету </h1>
+</head>
+<body>
+
+<form action="{{url_for('main')}}" method="POST"> 
+    <fieldset> 
+         <small>contact</small>
+        <input type="text" name = "contact">
+        <br>
+        <br>
+       <small>default</small>
+        <input type="text" name = "default">
+        <br>
+        <br> 
+        <small>education</small>
+        <input type="text" name = "education">
+        <br>
+        <br> 
+        <small>housing</small>
+        <input type="text" name = "housing">
+        <br>
+        <br> 
+        <small>job</small>
+        <input type="text" name = "job">
+        <br>
+        <br> 
+        <small>loan</small>
+        <input type="text" name = "loan">
+        <br>
+        <br> 
+        <small>marital</small>
+        <input type="text" name = "marital">
+        <br>
+        <br> 
+        <small>month</small>
+        <input type="text" name = "month">
+        <br>
+        <br> 
+        <small>poutcome</small>
+        <input type="text" name = "poutcome">
+        <br>
+        <br>
+        <small>age</small>
+        <input type="number" name = "age">
+        <br>
+        <br>
+        <small>balance</small>
+        <input type="number" name = "balance">
+        <br>
+        <br>
+        <small>day</small>
+        <input type="number" name = "day">
+        <br>
+        <br>
+        <small>duration</small>
+        <input type="number" name = "duration">
+        <br>
+        <br>
+        <small>campaign</small>
+        <input type="number" name = "campaign">
+        <br>
+        <br>
+        <small>pdays</small>
+        <input type="number" name = "pdays">
+        <br>
+        <br>
+        <small>previous</small>
+        <input type="number" name = "previous">
+        <br>
+        <br>
+        <button type = "submit">Получить решение</button>
+    </fieldset>
+</form>
+<div>
+    {%if result%}
+    <p>Ваш результат</p>
+    {{result}}
+    {% endif %}
+</div>
+</body>
+</html>
